@@ -4,15 +4,13 @@ from pygame.surface import Surface
 
 class Screen():
 
-    def __init__(self, screen_width: int, screen_height: int) -> None:
-        self.screen_width = screen_width
-        self.screen_height = screen_height
+    def __init__(self) -> None:
+        # SETUP
+        self.screen_width = 1000
+        self.screen_height = 600
         self.screen_surface = pygame.display.set_mode((self.screen_width, self.screen_height))
         pygame.display.set_caption('Platformer')
         pass
-
-    def set_mode(self) -> Surface:
-        return self.screen_surface
     
     def draw_grid(self, tile_size) -> None:
         color_white = (255, 255, 255)
