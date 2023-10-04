@@ -2,18 +2,18 @@ import pygame
 from pygame.locals import *
 from app.Screen.Screen import Screen
 from app.World.World import World
+from settings.settings import *
 
 class Game:
 
     def __init__(self) -> None:
-        # SETUP GAME
+        pygame.init()
         self.screen = Screen()
+        self.clock = pygame.time.Clock()
         self.running = True
-        self.tile_size = 50
 
 
     def run(self) -> None:
-        pygame.init()
 
         while self.running:
 
@@ -24,6 +24,7 @@ class Game:
             self.handle_events()
 
             pygame.display.update()
+            self.clock.tick(FPS)
 
         pygame.quit()
 
@@ -40,6 +41,6 @@ class Game:
                 self.running = False
 
     def handle_draw(self):
-        world = World(self.tile_size)
+        world = World()
         world.draw()
-        self.screen.draw_grid(self.tile_size)
+        self.screen.draw_grid()
