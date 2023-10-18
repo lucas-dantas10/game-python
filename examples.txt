@@ -1,0 +1,23 @@
+# GET ALL LAYERS
+#print(tmx_data.layers) #get all layers
+
+# ALL LAYERS VISIBLE
+# for layer in tmx_data.visible_layers:
+#     print(layer)
+
+# NAME OF LAYERS
+# print(tmx_data.layernames)
+
+# print(tmx_data.get_layer_by_name('Oceano'))
+
+# for obj in tmx_data.objectgroups:
+#     print(obj)
+
+# layer = tmx_data.get_layer_by_name('Oceano')
+
+# for x, y, surface in layer.tiles():
+#     print(x * 32)
+#     print(y * 32)
+#     print(surface)
+
+# print(layer.id)

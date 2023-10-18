@@ -3,6 +3,7 @@ from pygame.locals import *
 from app.Screen.Screen import Screen
 from app.World.World import World
 from settings.settings import *
+from pytmx.util_pygame import load_pygame
 
 class Game:
 
